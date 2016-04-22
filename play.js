@@ -13,7 +13,9 @@ var playState = {
         spaceKey.onDown.add(this.jump, this);
 
         pusherButton.bind('press', (data) => {
-            this.jump();
+            if(document.getElementById('pusherButtonEnavbled').checked) {
+                this.jump();
+            }
         });
 
         this.timer = game.time.events.loop(1600, this.addPipes, this);

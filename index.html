@@ -2,11 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Flappy Bird Clone</title>
-        
+        <title>FlappyBen</title>
+
+        <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+        <script>
+            var pusher = new Pusher('087e104eb546157304a9', {cluster:'eu'});
+            var pusherButton = pusher.subscribe('button');
+        </script>
         <script type="text/javascript" src="phaser.min.js"></script>
-        <script type="text/javascript" src="game.min.js"></script>
-        
+        <script type="text/javascript" src="boot.js"></script>
+        <script type="text/javascript" src="menu.js"></script>
+        <script type="text/javascript" src="play.js"></script>
+
     </head>
     <style>
     body {
@@ -18,7 +25,7 @@
         margin-left: -200px;
         margin-top: -245px;
         left: 50%; top: 50%;
-        
+
         border: 1px solid black;
     }
     p {
@@ -26,7 +33,6 @@
     }
     </style>
     <body>
-        <p><strong>Controls</strong>: Spacebar to jump</p>
         <div id="gameDiv"></div>
     </body>
 </html>

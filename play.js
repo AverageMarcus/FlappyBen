@@ -13,7 +13,7 @@ var playState = {
         spaceKey.onDown.add(this.jump, this);
 
         pusherButton.bind('press', (data) => {
-            if(document.getElementById('pusherButtonEnavbled').checked) {
+            if(document.getElementById('pusherButtonEnabled').checked) {
                 this.jump();
             }
         });

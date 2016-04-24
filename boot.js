@@ -6,14 +6,16 @@ Array.prototype.random = function(){
 var bens = [
     'ben',
     'ben2',
-    'ben3'
+    'ben3',
+    'ben4',
+    'ben5'
 ];
 
 
 var bootState = {
     preload: function () {
         for(var ben of bens) {
-            game.load.spritesheet(ben, `assets/bird/${ben}.png`, 68, 48, 3);
+            game.load.spritesheet(ben, `assets/bird/${ben}.png`, 43 /*68*/, 48, 1);
         }
 
         game.load.image('pipeTop', 'assets/pipe/top.png');

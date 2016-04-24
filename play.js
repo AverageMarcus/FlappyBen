@@ -12,11 +12,14 @@ var playState = {
         var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceKey.onDown.add(this.jump, this);
 
-        pusherButton.bind('press', (data) => {
+        var self = this;
+        pusherButton.bind('press', function(data) {
             if(document.getElementById('pusherButtonEnabled').checked) {
-                this.jump();
+                self.jump();
             }
         });
+
+        this.game.input.onDown.add(this.jump, this);
 
         this.timer = game.time.events.loop(1600, this.addPipes, this);
         // this.timer = game.time.events.loop(3000, this.logStuff, this);
